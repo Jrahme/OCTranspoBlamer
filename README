@@ -3,3 +3,6 @@ needed non standard libraries
 Requests
 	pip install requests
 
+The credentials file (config/logins.ser) Is used to for logging in. It can be built by creating and serializing a dictionary with pickle in the form of:
+
+{'database': {'username': 'null', 'host': 'null', 'password': 'null', 'port': 'null'}, 'apiLogin': {'apiID': 'bc753ae5', 'apiKey': 'c6dc9952455acf31c0ad1787ae7ca9eb'}}

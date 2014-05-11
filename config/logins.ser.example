@@ -1,0 +1,29 @@
+(dp0
+S'apiLogin'
+p1
+(dp2
+S'apiId'
+p3
+S'apiId here'
+p4
+sS'apiKey'
+p5
+S'apiKey Here'
+p6
+ssS'database'
+p7
+(dp8
+S'username'
+p9
+S'null'
+p10
+sS'host'
+p11
+g10
+sS'password'
+p12
+g10
+sS'port'
+p13
+g10
+ss.
