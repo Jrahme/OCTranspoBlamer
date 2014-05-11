@@ -1,0 +1,10 @@
+'database':{
+	'username':'',
+	'password':'',
+	'host':'',
+	'port':''
+},
+'apiLogin':{
+	'apiId':'your api id',
+	'apiKey':'your api key'
+}
