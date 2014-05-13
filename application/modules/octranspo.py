@@ -11,19 +11,22 @@ class OcTranspoGetter:
 		credentials = pickle.load(credFile)
 		
 		self.apiID = credentials['apiLogin']['apiID']
-		#self.apiKey = credentials['apiLogin']['apiKey']
-		#self.apiKey = '79e65ca434f89797b63aa0bb4c9ae528'
-		self.payLoad = {'apiID':self.apiID,'apiKey':self.apiKey}
+		self.apiKey = credentials['apiLogin']['apiKey']
+		self.payLoad = {'appID':self.apiID,'apiKey':self.apiKey}
 
 		print self.payLoad
 
 #Get live data
-	def getLiveData(self,bus,stop):
-		self.payLoad['stopNum'] = stop
-		soapData = requests.post('https://api.octranspo1.com/v1.2/GetRouteSummaryForStop',data = self.payLoad)
+	def getLiveData(self,bus,stop,route):
+		self.payLoad['routeNo'] = route
+		self.payLoad['stopNo'] = stop
+		soapData = requests.post('https://api.octranspo1.com/v1.2/GetNextTripsForStop',data = self.payLoad)
 		return soapData
-		
-		
+
+	def getStopInfo(self,bus,stop):
+		self.payLoad['stopNo'] = stop
+		soapData = requests.post('https://api.octranspo1.com/v1.2/GetRouteSummaryForStop', data = self.payLoad)
+		return soapData
 
 #Get scheduled arrial time for bus
 #	def getScheduledArrival(self,bus,stop):

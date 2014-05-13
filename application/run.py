@@ -5,9 +5,12 @@ from octranspo import OcTranspoGetter
 import utilities
 
 octranspo = OcTranspoGetter();
-soapData = octranspo.getLiveData('3017','94')
+soapData = octranspo.getStopData('3017','94')
 
 print soapData.text
+
+
+
 
 '''
 credentials = {'database': {'username': 'null', 'host': 'null', 'password': 'null', 'port': 'null'}, 'apiLogin': {'apiID': 'apiID', 'apiKey': 'apikey'}}
